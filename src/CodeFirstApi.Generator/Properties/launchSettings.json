@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Debug BlazorApp": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\samples\\BlazorApp\\BlazorApp.csproj"
+    },
+    "Debug BlazorApp.Client": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\samples\\BlazorApp.Client\\BlazorApp.Client.csproj"
+    }
+  }
+}
