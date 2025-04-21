@@ -4,7 +4,7 @@ Mainly a generator project, to create REST API and appropriate interfaces for ea
 - Based on interface definition in Shared project
   - Create Controller based REST API, to be used in Backend (respecting Authorize attribute).
   - Create a client to be used in Razor Components in WebAssembly Render mode, which calls the REST API above.
-  - Add wrapper around the service implementation in Backend for use in ServerSide Render mode, so it is protected as the REST API is.
+  - Add wrapper around the service implementation in Backend for use in ServerSide Render mode, so it is evaluating the same Authorize attribute definition as the REST API is.
   - For the wrappers used when running on the server and in browser, to automatically implement State Persistance for use in Prerendering (to remove the flicker on mode change with prerendering)
 
 This means, that you define the interface in Shared project, and the generator will create the necessary code for you.
