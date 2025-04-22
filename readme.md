@@ -16,6 +16,9 @@ And of course implementing this interface in the backend and adding it to the DI
 
 # Supported attributes
 
+In projects that reference the CodeFirstApi.Generator project, you can use the following attributes.
+Reference CodeFirstApi.Core project to get the attributes.
+
 - GenerateHttpClients 
   - Assembly attribute, generates the clients for the services, to be used in Client project.
 - GenerateHttpControllers
@@ -32,6 +35,8 @@ And of course implementing this interface in the backend and adding it to the DI
 
 See the project in the `sample` folder.
 
+Or see the [Demo app](https://codefirstapi.azurewebsites.net/).
+
 
 # Usage notice
 
@@ -41,10 +46,13 @@ Nuget package will not be released later on when the code is a bit more stable.
 
 ## Next TODOs
 
-- release as Nuget package
-- have a demo app deployment
-- add diagram of generated code
+1. release as Nuget package
+2. add diagram of generated code 
+3. add exact steps to add this to new projects
 
+
+### Rest of TODOs
+ 
 - add route attribute support
   - use arguments that are mentioned in route direct instead of JSON
 - better handling of state persistance key for arguments (using JSON of arguments now, which is not optimal)
