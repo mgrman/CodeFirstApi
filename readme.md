@@ -41,13 +41,15 @@ Nuget package will not be released later on when the code is a bit more stable.
 
 ## Next TODOs
 
+- release as Nuget package
+- have a demo app deployment
+- add diagram of generated code
+
 - add route attribute support
   - use arguments that are mentioned in route direct instead of JSON
 - better handling of state persistance key for arguments (using JSON of arguments now, which is not optimal)
 - add Verb attribute (can be combined with route)
 - add allow anonymous attribute
-- release as Nuget package
-- have a demo app deployment
 
 
 ## Similar
