@@ -1,13 +1,31 @@
 ﻿@page "/auth"
+@inject IClass1 Service
 
 @using Microsoft.AspNetCore.Authorization
 
-@attribute [Authorize]
-
 <PageTitle>Auth</PageTitle>
-
-<h1>You are authenticated</h1>
-
 <AuthorizeView>
-    Hello @context.User.Identity?.Name!
+    <Authorized>
+        <h1>You are authenticated</h1>
+        Hello @context.User.Identity?.Name!
+        The counter below is will not throw an exception if you click it, as authorization is checked on server side if all render and you are authorized.
+    </Authorized>
+    <NotAuthorized>
+        <h1>You're not authorized</h1>
+        The counter below is expected to throw an exception if you click it, as authorization is checked on server side if all render modes.
+    </NotAuthorized>
 </AuthorizeView>
+
+
+<h2>Authorized Counter</h2>
+<p role="status">Current count: @currentCount</p>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async Task IncrementCount()
+    {
+        currentCount = await Service.IncrementAuthorizedCountAsync(currentCount);
+    }
+}

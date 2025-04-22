@@ -9,4 +9,6 @@ public interface IClass1
     [PersistForPrerendering]
     ValueTask<IReadOnlyList<WeatherForecast>> GetForecastsAsync();
     ValueTask<int> IncrementCountAsync(int currentCount);
+    [Authorize]
+    ValueTask<int> IncrementAuthorizedCountAsync(int currentCount);
 }
