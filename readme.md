@@ -1,6 +1,6 @@
 ﻿# CodeFirstApi
 
-Mainly a generator project, to create REST API and appropriate interfaces for easy working in Blazor InteractiveAuto render mode.
+Code generator project, to create REST API and appropriate interfaces for easy working in Blazor InteractiveAuto render mode.
 - Based on interface definition in Shared project
   - Create Controller based REST API, to be used in Backend (respecting Authorize attribute).
   - Create a client to be used in Razor Components in WebAssembly Render mode, which calls the REST API above.
@@ -58,6 +58,7 @@ Nuget package will not be released later on when the code is a bit more stable.
 - better handling of state persistance key for arguments (using JSON of arguments now, which is not optimal)
 - add Verb attribute (can be combined with route)
 - add allow anonymous attribute
+- add Unity HTTP Client generator support
 
 
 ## Similar
@@ -79,3 +80,8 @@ Nuget package will not be released later on when the code is a bit more stable.
   - the `@inject ICall<AddComment, Guid> AddComment` is a good example of that
     - you need to know what request class you want to use and what it should return. 
     - This seems unnecessary.
+
+- https://github.com/RicoSuter/NSwag
+  - Can create Clients from Server side APIs
+  - But needs an extra build step to generate OpenAPI specification, from which the Clients can be generated
+  - And needs extra configuration to share the types themselves, as there is an in between format instead of using code itself for definition.
